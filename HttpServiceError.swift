@@ -14,6 +14,7 @@ import Foundation
 enum HttpServiceError: Error {
     
     enum UrlBuildingFailureReason {
+        case serverUrlNil(serverUrl: String)
         case serverUrlWithRelativePathNil(serverUrl: String, relativeUrl: String)
         case urlComponentsNil(absoluteUrl: String)
         case resultUrlNil(components: String)
@@ -32,4 +33,5 @@ enum HttpServiceError: Error {
     case serializationFailed(reason: String)
     case tokenReceivingFailed
     case connectionFailed(reason: ConnectionFailureReason)
+    case unknown(reason: String)
 }

@@ -43,7 +43,7 @@ final class HttpRequestConfiguratorImpl: HttpRequestConfigurator {
         return self
     }
     
-    func buildConfiguration() -> HttpRequestConfiguration {
+    func build() -> HttpRequestConfiguration {
         return HttpRequestConfiguration(
             serverUrl: serverUrl,
             timeoutInterval: timeoutInterval,

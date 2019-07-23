@@ -11,7 +11,7 @@ import Foundation
 /**
  Builds url using NSURLComponents.
  */
-class HttpUrlComponentsUrlBuilder: HttpUrlBuilder {
+final class HttpUrlComponentsUrlBuilder: HttpUrlBuilder {
     
     func buildUrl(serverUrl: String, relativeUrlPath: String, parameters: [String: Any]) throws -> URL {
         guard let url = URL(string: relativeUrlPath, relativeTo: URL(string: serverUrl)) else {

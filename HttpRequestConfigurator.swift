@@ -14,5 +14,5 @@ protocol HttpRequestConfigurator {
     func contentLength(_ contentLength: UInt) -> Self
     func timeout(_ timeout: UInt) -> Self
     
-    func buildConfiguration() -> HttpRequestConfiguration
+    func build() -> HttpRequestConfiguration
 }

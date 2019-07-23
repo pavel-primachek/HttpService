@@ -14,3 +14,10 @@ struct HttpRequestConfiguration {
     let timeoutInterval: TimeInterval?
     let headers: [String: String]
 }
+
+extension HttpRequestConfiguration {
+    
+    static func defaultConfiguration(serverUrl: String) -> HttpRequestConfiguration {
+        return HttpRequestConfiguration(serverUrl: serverUrl, timeoutInterval: nil, headers: [:])
+    }
+}
